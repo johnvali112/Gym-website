@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <title>John fitness</title>
+        <link rel="stylesheet" href="fitness.htmlcss_files/style.css">
+        <link href="fitness.htmlcss_files/css.css" rel="stylesheet">
+        <style>
+            /*css reset*/
+            body{
+                font-family: 'Amarnath';
+                color:white;
+                font-size: 22px;
+                margin:0px;
+                padding:0px;
+                background: url('https://cdn.pixabay.com/photo/2016/11/22/22/25/abs-1850926_1280.jpg')
+            }
+            .left{
+                /*border: 3px solid blue;*/
+                display: inline-block;
+                position: absolute;
+                left: 34px;
+                top: 20px;
+            }
+            .left img{
+                width :100px;
+                filter: invert(100%);
+            }
+            .mid{
+                display:block;
+                width: 50%;
+                margin: 20px auto;
+                /*border: 3px solid red;*/
+            }
+            .right{
+                position: absolute;
+                right: 34px;
+                top: 20px;
+                display:inline-block;
+               /* border: 3px solid yellow;*/
+
+            }
+            .navbar{
+
+            }
+            .navbar li{
+                display:inline-block;
+                font-size: 25px;
+            }
+            .navbar a{
+                color: white;
+                text-decoration: none;
+                padding:34px 24px;
+            }
+            .navbar li a:hover,.navbar li a.active{
+                text-decoration: underline;
+                color:aqua;
+            }
+            .btn{
+                margin:0px 9px;
+                color: white;
+                background-color: pink;
+                padding: 4px 14px;
+                border: 2px solid green;
+                border-radius: 10px;
+                font-size: 20px;
+                cursor:pointer;
+            }
+            .btn:hover{
+                background-color: aquamarine;
+            }
+            .container{
+                float:right;
+                border:2px solid white;
+                margin: 50px 50px;
+                padding: 75px;
+                width:33%;
+                border-radius: 20px;
+                text-decoration-color: white;
+            }
+            .formgroup input{
+                text-align: center;
+                display: block;
+                width: 500px;
+                padding: 1px;
+                border:1px solid orange;
+                margin:11px auto;
+                font-size: 25px;
+                border-radius: 8px;
+
+            }
+            
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <!--left box for logo-->
+            <div class="left">
+        <img src="fitness.htmlcss_files/sport-3735288_1280.webp">
+            </div>
+            <!--mid box for navbar-->
+            <div class="mid">
+                <ul class="navbar">
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">Aboutus</a></li>
+                    <li><a href="#">fitnesscalculator</a></li>
+                    <li><a href="#">contact us</a></li>
+            </ul></div>
+            <!--right box for buttons-->
+            <div class="right">
+              <button class="btn">call us now</button>
+              <button class="btn">our Email</button>
+            </div>
+        </header>
+        <div class="container">
+            <h1>Join best gym of the world</h1>
+            <form action="noaction.php">
+                <div class="formgroup">
+                    <input type="text" name="" placeholder="Enter your name">
+                </div>
+                <div class="formgroup">
+                    <input type="Number" name="" placeholder="Enter your body weight">
+                </div>
+                <div class="formgroup">
+                    <input type="number" name="" placeholder="Enter your package months">
+                </div>
+                <div class="formgroup">
+                    package months:
+                 3months:<input type="checkbox">
+                 6months:<input type="checkbox">
+                </div>
+            
+                <div class="formgroup" id="submit">
+                    <input type="submit" value="submit Now">
+                </div>
+            </form>
+        </div>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+</body></html>
